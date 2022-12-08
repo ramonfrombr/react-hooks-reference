@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const UseRefComponent = () => {
+const UseRefRoute = () => {
   const [name, setName] = useState("");
 
   // renderCount = {current: 0}
@@ -38,4 +38,4 @@ const UseRefComponent = () => {
   );
 };
 
-export default UseRefComponent;
+export default UseRefRoute;

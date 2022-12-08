@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { code } from "./code";
+import { code } from "../hooks/usestate/code";
+
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import ShowCodeButton from "../components/ShowCodeButton";
 
 function getCountValue() {
   console.log("Console log run at every component mount");
   return 0;
 }
 
-const UseStateComponent = () => {
+const UseStateRoute = () => {
   const [showCode, setShowCode] = useState(false);
 
   // State static setting
@@ -106,9 +109,8 @@ const UseStateComponent = () => {
       <br />
       <br />
 
-      <button onClick={() => setShowCode(!showCode)}>
-        {showCode ? "Hide Code" : "Show Code"}
-      </button>
+      <ShowCodeButton showCode={showCode} setShowCode={setShowCode} />
+
       {showCode && (
         <>
           {/*<pre>{codeSnippet}</pre>*/}
@@ -127,4 +129,4 @@ const UseStateComponent = () => {
   );
 };
 
-export default UseStateComponent;
+export default UseStateRoute;

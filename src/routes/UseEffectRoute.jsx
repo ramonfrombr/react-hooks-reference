@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { code } from "./code";
+import ShowCodeButton from "../components/ShowCodeButton";
+import { code } from "../hooks/useeffect/code";
 
-const UseEffectComponent = () => {
+const UseEffectRoute = () => {
   const [showCode, setShowCode] = useState(false);
 
   const [resourceType, setResourceType] = useState("posts");
@@ -67,25 +68,20 @@ const UseEffectComponent = () => {
       <br />
       <br />
 
-      <button onClick={() => setShowCode(!showCode)}>
-        {showCode ? "Hide Code" : "Show Code"}
-      </button>
-      {showCode && (
-        <>
-          {/*<pre>{codeSnippet}</pre>*/}
+      <ShowCodeButton showCode={showCode} setShowCode={setShowCode} />
 
-          <SyntaxHighlighter
-            wrapLongLines
-            showLineNumbers
-            language="javascript"
-            style={atomOneDark}
-          >
-            {code}
-          </SyntaxHighlighter>
-        </>
+      {showCode && (
+        <SyntaxHighlighter
+          wrapLongLines
+          showLineNumbers
+          language="javascript"
+          style={atomOneDark}
+        >
+          {code}
+        </SyntaxHighlighter>
       )}
     </>
   );
 };
 
-export default UseEffectComponent;
+export default UseEffectRoute;
