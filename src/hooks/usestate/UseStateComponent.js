@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { code } from "./code";
 
 function getCountValue() {
   console.log("Console log run at every component mount");
@@ -6,6 +9,8 @@ function getCountValue() {
 }
 
 const UseStateComponent = () => {
+  const [showCode, setShowCode] = useState(false);
+
   // State static setting
   const [example, setExample] = useState("example value");
 
@@ -94,6 +99,30 @@ const UseStateComponent = () => {
       <button onClick={decrementCountObject}>-</button>
       <span style={{ backgroundColor: theme }}>{count}</span>
       <button onClick={incrementCountObject}>+</button>
+
+      <br />
+      <br />
+      <hr />
+      <br />
+      <br />
+
+      <button onClick={() => setShowCode(!showCode)}>
+        {showCode ? "Hide Code" : "Show Code"}
+      </button>
+      {showCode && (
+        <>
+          {/*<pre>{codeSnippet}</pre>*/}
+
+          <SyntaxHighlighter
+            wrapLongLines
+            showLineNumbers
+            language="javascript"
+            style={atomOneDark}
+          >
+            {code}
+          </SyntaxHighlighter>
+        </>
+      )}
     </div>
   );
 };
