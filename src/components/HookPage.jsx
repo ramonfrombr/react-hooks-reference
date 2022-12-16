@@ -24,7 +24,7 @@ const HookPage = ({ hookName, hookExplanation, exampleComponents }) => {
         setExampleNumber={setExampleNumber}
       />
 
-      <div className="bg-slate-100 rounded p-3 mb-5">
+      <div className="bg-slate-100 rounded p-3 mb-10">
         {exampleComponents[exampleNumber - 1].component}
       </div>
 

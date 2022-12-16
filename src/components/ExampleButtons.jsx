@@ -6,7 +6,7 @@ const ExampleButtons = ({
   setExampleNumber,
 }) => {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center mb-4">
       {exampleNumbers.map((n) => (
         <button
           key={n}

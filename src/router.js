@@ -10,6 +10,7 @@ import UseReducerRoute from "./routes/UseReducerRoute";
 import UseCallbackRoute from "./routes/UseCallbackRoute";
 import UseMemoRoute from "./routes/UseMemoRoute";
 import UseRefRoute from "./routes/UseRefRoute";
+import UseLayoutEffectRoute from "./routes/UseLayoutEffectRoute";
 
 const hookRoutes = [
   {
@@ -41,10 +42,11 @@ const hookRoutes = [
     path: "useRef",
     element: <UseRefRoute />,
   },
-  /*
   {
-    path: "",element: <Route />,
+    path: "useLayoutEffect",
+    element: <UseLayoutEffectRoute />,
   },
+  /*
   {
     path: "",element: <Route />,
   },

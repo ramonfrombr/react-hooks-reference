@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, ScrollRestoration } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { US, BR } from "country-flag-icons/react/3x2";
 import { LanguageContext } from "../LanguageContext.js";
@@ -13,15 +13,15 @@ const additionalHooks = [
   "useCallback",
   "useMemo",
   "useRef",
-  /*"useImperativeHandle",
   "useLayoutEffect",
+  /*"useImperativeHandle",
   "useDebugValue",
   "useDeferredValue",
   "useTransition",
   "useId",*/
 ];
 
-const libraryHooks = ["useSyncExternal", "useInsertionEffect"];
+//const libraryHooks = ["useSyncExternal", "useInsertionEffect"];
 
 const Root = () => {
   const [currentLanguage, setCurrentLanguage] = useState(englishLanguage);
@@ -29,6 +29,7 @@ const Root = () => {
   return (
     <LanguageContext.Provider value={currentLanguage}>
       <div className="flex flex-row max-w-screen min-h-screen">
+        <ScrollRestoration />
         <div className="bg-gray-100 flex flex-col p-5 min-w-[200px]">
           <div className="flex mb-3">
             <US

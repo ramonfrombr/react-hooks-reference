@@ -17,6 +17,7 @@ const Homepage = () => {
 
         <h3 className="text-lg font-semibold mb-8">{language.hooksSummary}</h3>
 
+        {/**
         <div className="[&>ul]:list-disc [&>ul]:list-inside [&_li]:mb-4 [&>h3]:mt-8 [&>h3]:mb-2 [&>h3]:text-xl">
           <ReactMarkdown
             components={{
@@ -31,7 +32,7 @@ const Homepage = () => {
           >
             {language.summary}
           </ReactMarkdown>
-        </div>
+        </div> */}
       </main>
     </div>
   );
