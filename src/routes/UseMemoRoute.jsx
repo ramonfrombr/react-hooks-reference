@@ -1,47 +1,16 @@
-import React, { useState, useMemo, useEffect } from "react";
+import React from "react";
+import HookPage from "../components/HookPage";
 
-const UseMemoComponent = () => {
-  const [number, setNumber] = useState(0);
-  const [dark, setDark] = useState(false);
+import UseMemoExample1, {
+  snippets as Snippets1,
+} from "../examples/useMemo/UseMemoExample1";
 
-  const doubleNumber = useMemo(() => {
-    return slowFunction(number);
-  }, [number]);
+const exampleComponents = [
+  { component: <UseMemoExample1 />, snippets: Snippets1 },
+];
 
-  // Referencial equality for objects
-  const themeStyles = useMemo(() => {
-    return {
-      backgroundColor: dark ? "black" : "white",
-      color: dark ? "white" : "black",
-    };
-  });
-
-  // Without themeStyles assigned inside a useMemo hook, the console.log would run everytime the component mounted, which includes when the counter variables is changed
-  useEffect(() => {
-    console.log("Theme changed");
-  }, [themeStyles]);
-
-  return (
-    <>
-      <input
-        type="number"
-        value={number}
-        onChange={(e) => setNumber(parseInt(e.target.value))}
-      />
-      <br />
-      <button onClick={() => setDark((prevDark) => !prevDark)}>
-        Change Theme
-      </button>
-
-      <div style={themeStyles}>{doubleNumber}</div>
-    </>
-  );
+const UseMemoRoute = () => {
+  return <HookPage hookName="useMemo" exampleComponents={exampleComponents} />;
 };
 
-function slowFunction(num) {
-  console.log("Calling Slow Function");
-  for (let i = 0; i < 200000000; i++) {}
-  return num * 2;
-}
-
-export default UseMemoComponent;
+export default UseMemoRoute;

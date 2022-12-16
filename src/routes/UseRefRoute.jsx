@@ -1,41 +1,20 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import HookPage from "../components/HookPage";
+
+import UseRefExample1, {
+  snippets as Snippets1,
+} from "../examples/useRef/UseRefExample1";
+import UseRefExample2, {
+  snippets as Snippets2,
+} from "../examples/useRef/UseRefExample2";
+
+const exampleComponents = [
+  { component: <UseRefExample1 />, snippets: Snippets1 },
+  { component: <UseRefExample2 />, snippets: Snippets2 },
+];
 
 const UseRefRoute = () => {
-  const [name, setName] = useState("");
-
-  // renderCount = {current: 0}
-  // Changing the value of a ref does not cause the component to re-render
-  const renderCount = useRef(1);
-
-  const inputRef = useRef();
-  const previousName = useRef("");
-
-  useEffect(() => {
-    renderCount.current = renderCount.current + 1;
-  });
-
-  // ACessing an element using useRef
-  const focus = () => {
-    inputRef.current.focus();
-  };
-
-  // Persisting previous value
-  useEffect(() => {
-    previousName.current = name;
-  }, [name]);
-
-  return (
-    <>
-      <input value={name} onChange={(e) => setName(e.target.value)} />
-      <div>
-        My name is {name} and used to be {previousName.current}
-      </div>
-      <div>I rendered {renderCount.current} times</div>
-      <hr />
-      <input ref={inputRef} />
-      <button onClick={focus}>Focus input</button>
-    </>
-  );
+  return <HookPage hookName="useRef" exampleComponents={exampleComponents} />;
 };
 
 export default UseRefRoute;
