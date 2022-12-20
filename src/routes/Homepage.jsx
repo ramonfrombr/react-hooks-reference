@@ -17,8 +17,7 @@ const Homepage = () => {
 
         <h3 className="text-lg font-semibold mb-8">{language.hooksSummary}</h3>
 
-        {/**
-        <div className="[&>ul]:list-disc [&>ul]:list-inside [&_li]:mb-4 [&>h3]:mt-8 [&>h3]:mb-2 [&>h3]:text-xl">
+        <div className="[&>ul]:list-disc [&>ul]:list-inside [&_li]:mb-4 [&>h3]:mb-4 [&>h3]:text-xl bg-emerald-50 p-3 rounded mb-8 drop-shadow-lg border-2 border-teal-300">
           <ReactMarkdown
             components={{
               code: ({ node, ...props }) => (
@@ -30,9 +29,41 @@ const Homepage = () => {
               a: ({ node, ...props }) => <Link to={props.href} {...props} />,
             }}
           >
-            {language.summary}
+            {language.basicHooksSummary}
           </ReactMarkdown>
-        </div> */}
+        </div>
+
+        <div className="[&>ul]:list-disc [&>ul]:list-inside [&_li]:mb-4 [&>h3]:mb-4 [&>h3]:text-xl bg-emerald-100 p-3 rounded mb-8 drop-shadow-lg border-2 border-teal-300">
+          <ReactMarkdown
+            components={{
+              code: ({ node, ...props }) => (
+                <code className="text-pink-500" {...props} />
+              ),
+              li: ({ node, ...props }) => (
+                <li className="hover:text-blue-700" {...props} />
+              ),
+              a: ({ node, ...props }) => <Link to={props.href} {...props} />,
+            }}
+          >
+            {language.additionalHooksSummary}
+          </ReactMarkdown>
+        </div>
+
+        <div className="[&>ul]:list-disc [&>ul]:list-inside [&_li]:mb-4 [&>h3]:mb-4 [&>h3]:text-xl bg-emerald-200 p-3 rounded mb-8 drop-shadow-lg border-2 border-teal-300">
+          <ReactMarkdown
+            components={{
+              code: ({ node, ...props }) => (
+                <code className="text-pink-500" {...props} />
+              ),
+              li: ({ node, ...props }) => (
+                <li className="hover:text-blue-700" {...props} />
+              ),
+              a: ({ node, ...props }) => <Link to={props.href} {...props} />,
+            }}
+          >
+            {language.additionalHooksSummary}
+          </ReactMarkdown>
+        </div>
       </main>
     </div>
   );

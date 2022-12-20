@@ -11,6 +11,11 @@ import UseCallbackRoute from "./routes/UseCallbackRoute";
 import UseMemoRoute from "./routes/UseMemoRoute";
 import UseRefRoute from "./routes/UseRefRoute";
 import UseLayoutEffectRoute from "./routes/UseLayoutEffectRoute";
+import UseToggleRoute from "./routes/customHooks/UseToggleRoute";
+import UseTimeoutRoute from "./routes/customHooks/UseTimeoutRoute";
+import UseDebounceRoute from "./routes/customHooks/UseDebounceRoute";
+import UseUpdateEffectRoute from "./routes/customHooks/UseUpdateEffectRoute";
+import UseArrayRoute from "./routes/customHooks/UseArrayRoute";
 
 const hookRoutes = [
   {
@@ -46,7 +51,43 @@ const hookRoutes = [
     path: "useLayoutEffect",
     element: <UseLayoutEffectRoute />,
   },
+  {
+    path: "useToggle",
+    element: <UseToggleRoute />,
+  },
+  {
+    path: "useTimeout",
+    element: <UseTimeoutRoute />,
+  },
+  {
+    path: "useDebounce",
+    element: <UseDebounceRoute />,
+  },
+  {
+    path: "useUpdateEffect",
+    element: <UseUpdateEffectRoute />,
+  },
+
+  {
+    path: "useArray",
+    element: <UseArrayRoute />,
+  },
   /*
+  {
+    path: "",element: <Route />,
+  },
+  {
+    path: "",element: <Route />,
+  },
+  {
+    path: "",element: <Route />,
+  },
+  {
+    path: "",element: <Route />,
+  },
+  {
+    path: "",element: <Route />,
+  },
   {
     path: "",element: <Route />,
   },

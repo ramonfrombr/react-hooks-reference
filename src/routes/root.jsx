@@ -23,6 +23,14 @@ const additionalHooks = [
 
 //const libraryHooks = ["useSyncExternal", "useInsertionEffect"];
 
+const customHooks = [
+  "useToggle",
+  "useTimeout",
+  "useDebounce",
+  /*"useUpdateEffect" - This hook does not work correctly on React v18. In the example, the alert runs before the value is updated on the screen*/
+  "useArray",
+];
+
 const Root = () => {
   const [currentLanguage, setCurrentLanguage] = useState(englishLanguage);
 
@@ -65,6 +73,13 @@ const Root = () => {
             {hook}
           </Link>
         ))}    */}
+
+          <h5 className="text-xl my-2">{currentLanguage.customHooks}</h5>
+          {customHooks.map((hook, idx) => (
+            <Link className="hover:text-slate-400" key={idx} to={hook}>
+              {hook}
+            </Link>
+          ))}
         </div>
 
         <div className="bg-white p-12 max-w-[85%]">

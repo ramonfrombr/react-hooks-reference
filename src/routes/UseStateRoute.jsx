@@ -7,10 +7,14 @@ import UseStateExample1, {
 import UseStateExample2, {
   snippets as Snippets2,
 } from "../examples/useState/UseStateExample2";
+import UseStateExample3, {
+  snippets as Snippets3,
+} from "../examples/useState/UseStateExample3";
 
 const exampleComponents = [
   { component: <UseStateExample1 />, snippets: Snippets1 },
   { component: <UseStateExample2 />, snippets: Snippets2 },
+  { component: <UseStateExample3 />, snippets: Snippets3 },
 ];
 
 const hookExplanation = "";
