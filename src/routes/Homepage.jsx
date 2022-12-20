@@ -61,7 +61,7 @@ const Homepage = () => {
               a: ({ node, ...props }) => <Link to={props.href} {...props} />,
             }}
           >
-            {language.additionalHooksSummary}
+            {language.customHooksSummary}
           </ReactMarkdown>
         </div>
       </main>

@@ -13,7 +13,11 @@ export const englishLanguage = {
   - [**useRef** returns a ref object with a \`.current\` property. The ref object is mutable. It is mainly used to access a child component imperatively.](/useRef)
   - [**useLayoutEffect** fires at the end of all DOM mutations. It's best to use \`useEffect\` as much as possible over this one as the \`useLayoutEffect\` fires synchronously.](/useLayoutEffect)
   - [**useDebugValue** helps to display a label in *React DevTools* for custom hooks.](/useDebugValue)`,
-  customHooksSummary: ``,
+  customHooksSummary: `### Custom Hooks
+  - [**useToggle** is used to create straighforward toggle functionality for a boolean value.](/useToggle)
+  - [**useTimeout** is used to create straighforward timeout functionality.](/useTimeout)
+  - [**useDebounce** is used to prevent the call of a method repeatedly whose run is dependant on state change. This way, if the state changes continuously the method will only be called after the state hasn't changed after the defined time delay.](/useDebounce)
+  - [**useArray** is used to create and maintain array based data in a simple way.](/useArray)`,
   basicHooks: "Basic Hooks",
   additionalHooks: "Additional Hooks",
   customHooks: "Custom Hooks",
