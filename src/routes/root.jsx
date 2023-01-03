@@ -29,6 +29,11 @@ const customHooks = [
   "useDebounce",
   /*"useUpdateEffect" - This hook does not work correctly on React v18. In the example, the alert runs before the value is updated on the screen*/
   "useArray",
+  "usePrevious",
+  "useStateWithHistory",
+  "useStorage",
+  "useAsync",
+  "useFetch",
 ];
 
 const Root = () => {

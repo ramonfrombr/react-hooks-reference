@@ -16,6 +16,9 @@ import UseTimeoutRoute from "./routes/customHooks/UseTimeoutRoute";
 import UseDebounceRoute from "./routes/customHooks/UseDebounceRoute";
 import UseUpdateEffectRoute from "./routes/customHooks/UseUpdateEffectRoute";
 import UseArrayRoute from "./routes/customHooks/UseArrayRoute";
+import UsePreviousRoute from "./routes/customHooks/UsePreviousRoute";
+import UseStateWithHistoryRoute from "./routes/customHooks/UseStateWithHistoryRoute";
+import UseStorageRoute from "./routes/customHooks/UseStorageRoute";
 
 const hookRoutes = [
   {
@@ -67,12 +70,31 @@ const hookRoutes = [
     path: "useUpdateEffect",
     element: <UseUpdateEffectRoute />,
   },
-
   {
     path: "useArray",
     element: <UseArrayRoute />,
   },
+  {
+    path: "usePrevious",
+    element: <UsePreviousRoute />,
+  },
+  {
+    path: "useStateWithHistory",
+    element: <UseStateWithHistoryRoute />,
+  },
+  {
+    path: "useStorage",
+    element: <UseStorageRoute />,
+  },
   /*
+  {
+    path: "useAsync",
+    element: <UseAsyncRoute />,
+  },
+  {
+    path: "useFetch",
+    element: <UseFetchRoute />,
+  },  
   {
     path: "",element: <Route />,
   },
