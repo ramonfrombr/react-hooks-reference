@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export default function useUpdateEffect(callback, dependencies) {
+export default function useUpdateEffect(callback, ...dependencies) {
   const firstRenderRef = useRef(true);
 
   useEffect(() => {
@@ -10,5 +10,5 @@ export default function useUpdateEffect(callback, dependencies) {
     }
 
     return callback;
-  }, dependencies);
+  }, [callback, dependencies]);
 }

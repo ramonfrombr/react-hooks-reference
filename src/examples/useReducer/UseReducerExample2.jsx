@@ -18,6 +18,8 @@ function reducerFunction(state, action) {
       );
     case ACTIONS.DELETE_TODO:
       return state.filter((todo) => todo.id !== action.payload.todoId);
+    default:
+      return state;
   }
 }
 

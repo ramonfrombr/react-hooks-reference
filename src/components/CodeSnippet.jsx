@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ShowCodeButton from "./ShowCodeButton";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const CodeSnippet = ({ exampleNumber, snippets }) => {
   const [showCode, setShowCode] = useState(true);
-
-  /* 
-  // Hides code after selecting another example
-  useEffect(() => {
-    return () => {
-      setShowCode(false);
-    };
-  }, [exampleNumber]); */
 
   return (
     <>
