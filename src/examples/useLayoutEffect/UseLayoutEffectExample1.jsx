@@ -1,11 +1,11 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 
 const UseLayoutEffectExample1 = () => {
   const [show, setShow] = useState(false);
   const popup = useRef();
   const button = useRef();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     debugger;
     if (popup.current == null || button.current == null) return;
     const { bottom } = button.current.getBoundingClientRect();

@@ -14,7 +14,7 @@ const UseMemoExample1 = () => {
       backgroundColor: dark ? "black" : "white",
       color: dark ? "white" : "black",
     };
-  });
+  }, [dark]);
 
   // Without themeStyles assigned inside a useMemo hook, the console.log would run everytime the component mounted, which includes when the counter variables is changed
   useEffect(() => {
