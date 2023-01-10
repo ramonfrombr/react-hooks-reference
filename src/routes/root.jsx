@@ -39,6 +39,8 @@ const customHooks = [
 const Root = () => {
   const [currentLanguage, setCurrentLanguage] = useState(englishLanguage);
 
+  console.log("testing github actions");
+
   return (
     <LanguageContext.Provider value={currentLanguage}>
       <div className="flex flex-row max-w-screen min-h-screen">
